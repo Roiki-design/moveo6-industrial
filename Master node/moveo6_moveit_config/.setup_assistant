@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: moveo6_support
+    relative_path: moveo6/moveo6.urdf
+    xacro_args: ""
+  SRDF:
+    relative_path: config/moveo6.srdf
+  CONFIG:
+    author_name: joonas
+    author_email: joonas@joonas.com
+    generated_timestamp: 1561965322
