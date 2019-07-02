@@ -1,8 +1,8 @@
 controller_list:
   - name: fake_arm_controller
     joints:
-      - Rev1
-      - Rev3
+      - joint_1
+      - joint_2
       - rev4
       - Rev5
       - Rev6
