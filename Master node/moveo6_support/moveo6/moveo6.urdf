@@ -4,11 +4,6 @@
   <link name="base"/>
 
   <link name="base_link">
-    <inertial>
-      <origin rpy="0 0 0" xyz="6e-06 0.06359 0.033386"/>
-      <mass value="10.579237"/>
-      <inertia ixx="0.057522" ixy="2e-06" ixz="-0.020179" iyy="0.020301" iyz="0.022456" izz="0.071015"/>
-    </inertial>
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
@@ -187,7 +182,7 @@
 
 
   <joint name="base_link-base" type="fixed">
-  <parent link="$base_link" />
+  <parent link="base_link" />
   <child link="base" />
     <origin xyz="0 0 0" rpy="0 0 0" />
   </joint>
@@ -196,7 +191,7 @@
   <joint name="joint_1" type="revolute">
     <origin rpy="0 0 0" xyz="0.0 0.0 0.065"/>
     <parent link="base_link"/>
-    <child link="joint_1"/>
+    <child link="link_1"/>
     <axis xyz="-0.0 0.0 0.01"/>
     <limit effort="100" lower="-3.141593" upper="3.141593" velocity="100"/>
   </joint>

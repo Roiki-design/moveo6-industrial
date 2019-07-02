@@ -5,8 +5,8 @@
   <description>
      An automatically generated package with all the configuration and launch files for using the moveo6 with the MoveIt! Motion Planning Framework
   </description>
-  <author email="joonas@joonas.com">joonas</author>
-  <maintainer email="joonas@joonas.com">joonas</maintainer>
+  <author email="joonas@google.com">joonas</author>
+  <maintainer email="joonas@google.com">joonas</maintainer>
 
   <license>BSD</license>
 
