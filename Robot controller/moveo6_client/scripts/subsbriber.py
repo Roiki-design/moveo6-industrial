@@ -4,7 +4,7 @@ from std_msgs.msg import String
 
 def callback(data):
     rospy.loginfo(rospy.get_caller_id() + "I heard %s", data.data)
-    
+
 def listener():
 
     # In ROS, nodes are uniquely named. If two nodes with the same
@@ -14,8 +14,11 @@ def listener():
     # run simultaneously.
     rospy.init_node('program_listener', anonymous=True)
 
-    rospy.Subscriber("joint_path_command", String, callback)
-
+    states = rospy.Subscriber("joint_states", String, callback)
+    path_command = rospy.Subscriber("join_path_command",float64 , callback)
+    print(states)
+    print(path_command)
+    sleep(2)
     # spin() simply keeps python from exiting until this node is stopped
     rospy.spin()
 

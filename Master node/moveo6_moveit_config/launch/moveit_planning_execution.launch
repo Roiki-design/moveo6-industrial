@@ -35,7 +35,11 @@
 
   <!-- publish the robot state (tf transforms) -->
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
-
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" >
+    <param name="rate" value="50" />
+  <node name="robot_state" pkg="industrial_robot_client" type="robot_state" />
+<!--  <node pkg="industrial_robot_client" type="joint_trajectory_action" name="joint_trajectory_action" />
+-->
   <include file="$(find moveo6_moveit_config)/launch/move_group.launch">
     <arg name="publish_monitored_planning_scene" value="true" />
   </include>
@@ -45,5 +49,4 @@
   </include>
 
   <include file="$(find moveo6_moveit_config)/launch/default_warehouse_db.launch" />
-
 </launch>
