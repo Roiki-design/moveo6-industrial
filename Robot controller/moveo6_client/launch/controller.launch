@@ -1,7 +1,7 @@
 <<?xml version="1.0" encoding="UTF-8"?>
 <launch>
  <group ns="robotSubscriber">
-   <node name="moveo6_client" pkg=" moveo6_client" type="moveo6_node" />
+   <node name="command_subscriber" pkg=" moveo6_client" type="Subscriber.py" output="screen" />
 
  </group>
 </launch>
