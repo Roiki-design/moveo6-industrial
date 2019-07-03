@@ -10,41 +10,37 @@
     <!--CHAINS: When a chain is specified, all the links along the chain (including endpoints) are included in the group. Additionally, all the joints that are parents to included links are also included. This means that joints along the chain and the parent joint of the base link are included in the group-->
     <!--SUBGROUPS: Groups can also be formed by referencing to already defined group names-->
     <group name="arm">
-        <chain base_link="base_link" tip_link="moveo_7_1" />
+        <chain base_link="base_link" tip_link="link_7" />
     </group>
     <!--GROUP STATES: Purpose: Define a named state for a particular group, in terms of joint values. This is useful to define states like 'folded arms'-->
-    <group_state name="default" group="arm">
-        <joint name="Rev1" value="0" />
-        <joint name="Rev3" value="0" />
-        <joint name="Rev5" value="0" />
-        <joint name="Rev6" value="0" />
-        <joint name="Rev7" value="0" />
-        <joint name="rev4" value="0.2141" />
-    </group_state>
     <group_state name="start" group="arm">
-        <joint name="Rev1" value="0" />
-        <joint name="Rev3" value="0.0496" />
-        <joint name="Rev5" value="0" />
-        <joint name="Rev6" value="-0.7718" />
-        <joint name="Rev7" value="0" />
-        <joint name="rev4" value="1.9516" />
+        <joint name="joint_1" value="0" />
+        <joint name="joint_2" value="-0.6138" />
+        <joint name="joint_3" value="1.9772" />
+        <joint name="joint_4" value="0" />
+        <joint name="joint_5" value="0" />
+        <joint name="joint_6" value="0" />
     </group_state>
     <!--VIRTUAL JOINT: Purpose: this element defines a virtual joint between a robot link and an external frame of reference (considered fixed with respect to the robot)-->
+<<<<<<< HEAD
     <virtual_joint name="FixedBase" type="fixed" parent_frame="world" child_link="odom" />
+=======
+    <virtual_joint name="base" type="fixed" parent_frame="world" child_link="base_link" />
+>>>>>>> 7f23755069a6864f81a1faefcff20f78094207b1
     <!--DISABLE COLLISIONS: By default it is assumed that any link of the robot could potentially come into collision with any other link in the robot. This tag disables collision checking between a specified pair of links. -->
-    <disable_collisions link1="base_link" link2="moveo_1_1" reason="Adjacent" />
-    <disable_collisions link1="base_link" link2="moveo_2_1" reason="Never" />
-    <disable_collisions link1="base_link" link2="moveo_3_1" reason="Never" />
-    <disable_collisions link1="moveo_1_1" link2="moveo_2_1" reason="Adjacent" />
-    <disable_collisions link1="moveo_1_1" link2="moveo_3_1" reason="Never" />
-    <disable_collisions link1="moveo_1_1" link2="moveo_4_1" reason="Never" />
-    <disable_collisions link1="moveo_2_1" link2="moveo_3_1" reason="Adjacent" />
-    <disable_collisions link1="moveo_2_1" link2="moveo_4_1" reason="Never" />
-    <disable_collisions link1="moveo_3_1" link2="moveo_4_1" reason="Adjacent" />
-    <disable_collisions link1="moveo_4_1" link2="moveo_5_1" reason="Adjacent" />
-    <disable_collisions link1="moveo_4_1" link2="moveo_6_1" reason="Never" />
-    <disable_collisions link1="moveo_4_1" link2="moveo_7_1" reason="Never" />
-    <disable_collisions link1="moveo_5_1" link2="moveo_6_1" reason="Adjacent" />
-    <disable_collisions link1="moveo_5_1" link2="moveo_7_1" reason="Never" />
-    <disable_collisions link1="moveo_6_1" link2="moveo_7_1" reason="Adjacent" />
+    <disable_collisions link1="base_link" link2="link_1" reason="Adjacent" />
+    <disable_collisions link1="base_link" link2="link_2" reason="Never" />
+    <disable_collisions link1="base_link" link2="link_3" reason="Never" />
+    <disable_collisions link1="link_1" link2="link_2" reason="Adjacent" />
+    <disable_collisions link1="link_1" link2="link_3" reason="Never" />
+    <disable_collisions link1="link_1" link2="link_4" reason="Never" />
+    <disable_collisions link1="link_2" link2="link_3" reason="Adjacent" />
+    <disable_collisions link1="link_2" link2="link_4" reason="Never" />
+    <disable_collisions link1="link_3" link2="link_4" reason="Adjacent" />
+    <disable_collisions link1="link_4" link2="link_5" reason="Adjacent" />
+    <disable_collisions link1="link_4" link2="link_6" reason="Never" />
+    <disable_collisions link1="link_4" link2="link_7" reason="Never" />
+    <disable_collisions link1="link_5" link2="link_6" reason="Adjacent" />
+    <disable_collisions link1="link_5" link2="link_7" reason="Never" />
+    <disable_collisions link1="link_6" link2="link_7" reason="Adjacent" />
 </robot>

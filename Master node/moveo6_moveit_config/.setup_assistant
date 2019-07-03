@@ -7,5 +7,10 @@ moveit_setup_assistant_config:
     relative_path: config/moveo6.srdf
   CONFIG:
     author_name: joonas
+<<<<<<< HEAD
     author_email: joonas@joonas.com
     generated_timestamp: 1562053478
+=======
+    author_email: joonas@google.com
+    generated_timestamp: 1562080540
+>>>>>>> 7f23755069a6864f81a1faefcff20f78094207b1
