@@ -1,33 +1,6 @@
 digraph G {
 node [shape=box];
 "base_link" [label="base_link"];
-<<<<<<< HEAD
-"moveo_1_1" [label="moveo_1_1"];
-"moveo_2_1" [label="moveo_2_1"];
-"moveo_3_1" [label="moveo_3_1"];
-"moveo_4_1" [label="moveo_4_1"];
-"moveo_5_1" [label="moveo_5_1"];
-"moveo_6_1" [label="moveo_6_1"];
-"moveo_7_1" [label="moveo_7_1"];
-"odom" [label="odom"];
-node [shape=ellipse, color=blue, fontcolor=blue];
-"base_link" -> "Rev1" [label="xyz: 0 0 0.065 \nrpy: 0 -0 0"]
-"Rev1" -> "moveo_1_1"
-"moveo_1_1" -> "Rigid13" [label="xyz: 0 0 0.0255 \nrpy: 0 -0 0"]
-"Rigid13" -> "moveo_2_1"
-"moveo_2_1" -> "Rev3" [label="xyz: -0.06 0 0.14 \nrpy: 0 -0 0"]
-"Rev3" -> "moveo_3_1"
-"moveo_3_1" -> "rev4" [label="xyz: 0.0885 0.006028 0.221042 \nrpy: 0 -0 0"]
-"rev4" -> "moveo_4_1"
-"moveo_4_1" -> "Rev5" [label="xyz: -0.03675 0.024328 0.125157 \nrpy: 0 -0 0"]
-"Rev5" -> "moveo_5_1"
-"moveo_5_1" -> "Rev6" [label="xyz: -0.024994 0.017585 0.09336 \nrpy: 0 -0 0"]
-"Rev6" -> "moveo_6_1"
-"moveo_6_1" -> "Rev7" [label="xyz: 0.024081 0.007333 0.055483 \nrpy: 0 -0 0"]
-"Rev7" -> "moveo_7_1"
-"base_link" -> "odom_joint" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
-"odom_joint" -> "odom"
-=======
 "base" [label="base"];
 "link_1" [label="link_1"];
 "link_2" [label="link_2"];
@@ -53,5 +26,4 @@ node [shape=ellipse, color=blue, fontcolor=blue];
 "joint_5" -> "link_6"
 "link_6" -> "joint_6" [label="xyz: 0.024081 0.007333 0.055483 \nrpy: 0 -0 0"]
 "joint_6" -> "link_7"
->>>>>>> 7f23755069a6864f81a1faefcff20f78094207b1
 }
