@@ -1,0 +1,12 @@
+<<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+  <rosparam file="$(find moveo6_hardware_interface)/config/hardware.yaml" command="load"/>
+  <rosparam command="load" file="$(find moveo6_hardware_interface)/config/controllers.yaml"/>
+  <rosparam command="load" file="$(find moveo6_hardware_interface)/config/joint_limits.yaml" ns="namespace"/>
+  <node name="moveo6_hardware_interface" pkg=" moveo6_hardware_interface" type="moveo6_hardware_interface_node" output="screen" />
+  <node name="controller_spawner" pkg="controller_manager" type="spawner" output="screen" respawn="false" ns="/"
+    args="/moveo6/controller/state
+          /moveo6/controller/position/moveo6_arm"
+          />
+
+</launch>

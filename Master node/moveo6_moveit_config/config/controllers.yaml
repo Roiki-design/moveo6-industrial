@@ -1,5 +1,12 @@
 controller list:
--name:""
-action:ns: joint_trajectory_action
-type: FollowJointTrajectory
-Joints: [joint_1, Joint_2, joint_3, Joint_4, joint_5, Joint_6]
+ -name: "moveo6_arm_controller"
+ action:ns: joint_trajectory_action
+ type: FollowJointTrajectory
+ defaut: true
+ joints:
+   -joint_1
+   -joint_2
+   -joint_3
+   -joint_4
+   -joint_5
+   -joint_6
