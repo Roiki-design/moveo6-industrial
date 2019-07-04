@@ -1,7 +1,7 @@
 <launch>
  <group ns="robot_subscriber">
-   <node name="command_subscriber" pkg="moveo6_client" type="Subscriber.py" output="screen" respawn="true" respawn_delay="5" />
-   <node name="joint_statel_istener" pkg="moveo6_client" type="joint_state_listener.py" output="screen" respawn="true" respawn_delay="5" />
-     
+   <node name="subscriber" pkg="moveo6_client" type="subscriber" output="screen" respawn="true" respawn_delay="5" />
+   <node name="joint_statel_listener" pkg="moveo6_client" type="joint_state_listener" output="screen" respawn="true" respawn_delay="5" />
+
  </group>
 </launch>
