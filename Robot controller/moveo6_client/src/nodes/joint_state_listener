@@ -4,7 +4,7 @@
 
 import roslib
 import rospy
-from .home.joonas.moveo6_client_workspace.src..moveo6_client.srv.ReturnJointStates.srv import *
+from ReturnJointStates.srv import *
 from sensor_msgs.msg import JointState
 import threading
 
