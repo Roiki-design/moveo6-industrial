@@ -2,6 +2,7 @@
 <launch>
  <group ns="robotSubscriber">
    <node name="command_subscriber" pkg=" moveo6_client" type="Subscriber.py" output="screen" />
-
+   <node name="joint_state_listener" pkg=" moveo6_client" type="joint_state_listener.py" output="screen" />
+     
  </group>
 </launch>
