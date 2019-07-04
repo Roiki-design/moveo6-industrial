@@ -19,11 +19,11 @@
     <arg name="load_robot_description" value="true" />
   </include>
 
-  <!-- run the robot simulator and action interface nodes -->
+  <!-- run the robot simulator and action interface nodes
   <group if="$(arg sim)">
     <include file="$(find industrial_robot_simulator)/launch/robot_interface_simulator.launch" />
   </group>
-
+-->
   <!-- run the "real robot" interface nodes -->
   <!--   - this typically includes: robot_state, motion_interface, and joint_trajectory_action nodes -->
   <!--   - replace these calls with appropriate robot-specific calls or launch files -->

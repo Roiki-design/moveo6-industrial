@@ -1,7 +1,11 @@
 <launch>
     <include file="$(find moveo6_moveit_config)/launch/moveit_planning_execution.launch">
-      <include file="$(find moveo6_moveit_config)/launch/moveit_planning_execution.launch" ns="moveo6"/>
+      <group ns="moveo6">
+        <include file="$(find moveo6_moveit_config)/launch/moveit_planning_execution.launch" />
+        <include file="$(find industrial_robot_client)/launch/joint_trajectory_action" >
+          <rosparam command="load" file="$(find moveo6_moveit_config/config/joints.yaml)" />
+      </group>
   <node pkg="joint_state_publisher" type="joint_state_publisher" name="dut_joint_state_publisher">
     <param name="publish_default_positions" value="False"/>
-  </node>
+
 </launch>
