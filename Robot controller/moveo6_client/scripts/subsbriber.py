@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 import rospy
-from std_msgs.msg import String
+import std_msgs.msgs
+import joint_state_listener
+
 
 def callback(data):
     rospy.loginfo(rospy.get_caller_id() + "I heard %s", data.data)
@@ -14,7 +16,7 @@ def listener():
     # run simultaneously.
     rospy.init_node('program_listener', anonymous=True)
 
-    states = rospy.Subscriber("joint_states", String, callback)
+    states = rospy.Subscriber("joint_states", float64, callback)
     path_command = rospy.Subscriber("join_path_command",float64 , callback)
     print(states)
     print(path_command)
