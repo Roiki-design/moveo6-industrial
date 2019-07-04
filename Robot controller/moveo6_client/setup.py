@@ -5,8 +5,8 @@ from catkin_pkg.python_setup import generate_distutils_setup
 
 # fetch values from package.xml
 setup_args = generate_distutils_setup(
-    packages=['your_package'],
-    scripts=['bin/myscript'],
+    packages=['moveo_6'],
+    #scripts=['joint_state_listener': 'subscriber'],
     package_dir={'': 'src'})
 
 setup(**setup_args)
