@@ -59,8 +59,9 @@
   <exec_depend>roscpp</exec_depend>
   <exec_depend>rospy</exec_depend>
   <exec_depend>std_msgs</exec_depend>
- <exec_depend>sensor_msgs</exec_depend>
- <depend>industrial_msgs</depend>
+  <exec_depend>sensor_msgs</exec_depend>
+  <depend>industrial_msgs</depend>
+  <depend>roslib</depend>
   <!-- The export tag contains other, unspecified, tags -->
   <export>
     <!-- Other tools can request additional information be placed here -->

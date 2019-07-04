@@ -1,11 +1,10 @@
 #!/usr/bin/env python
 #spins off a thread to listen for joint_states messages
 #and provides the same information (or subsets of) as a service
-
 import roslib
-roslib.load_manifest('joint_states_listener')
+roslib.load_manifest('moveo6_client')
 import rospy
-from joint_states_listener.srv import *
+from ReturnJointStates.srv import *
 from sensor_msgs.msg import JointState
 import threading
 
