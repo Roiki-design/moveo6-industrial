@@ -1,4 +1,5 @@
 <launch>
+    <include file="$(find moveo6_moveit_config)/launch/moveit_planning_execution.launch">
 <node pkg="joint_state_publisher" type="joint_state_publisher" name="dut_joint_state_publisher">
     <param name="publish_default_positions" value="False"/>
   </node>
