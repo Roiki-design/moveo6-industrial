@@ -1,7 +1,0 @@
-<launch>
-  <rosparam command="load" file="$(moveo6_moveit_config)/config/controller_joint_names.yaml" />
-    <include file="$(find moveo6_moveit_config)/launch/moveit_planning_execution.launch"/>
-      
-  <node pkg="joint_state_publisher" type="joint_state_publisher" name="joint_state_publisher"/>
-  <node pkg="industrial_robot_client" type="joint_trajectory_action" name="joint_trajectory_action" />
-</launch>

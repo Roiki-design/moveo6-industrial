@@ -1,9 +1,0 @@
-<launch>
- <group ns="robot_subscriber">
-   <node name="action_server" pkg="actionlib" type="action_server.py" args="" output="screen" respawn="true" respawn_delay="10"/>
-   <node name="simple_action_server" pkg="actionlib" type="simple_action_server.py" args="" output="screen" respawn="true" respawn_delay="10"/>
-   <node name="joint_state_listener" pkg="moveo6_client" type="joint_state_listener" output="screen" respawn="true" respawn_delay="5" />
-
- </group>
-</launch>
-
