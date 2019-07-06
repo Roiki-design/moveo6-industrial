@@ -1,0 +1,10 @@
+<launch>
+
+    <include file="$(find moveo6_moveit_config)/launch/moveit_planning_execution.launch">
+  
+    </include>
+     <include file="$(find moveo6_moveit_config)/launch/ros_controllers.launch">
+  
+    </include>
+    
+</launch>
