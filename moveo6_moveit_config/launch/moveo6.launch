@@ -1,10 +1,11 @@
 <launch>
 
     <include file="$(find moveo6_moveit_config)/launch/moveit_planning_execution.launch">
-  
+
+       <arg name="robot_ip" value="192.168.3.229" />
     </include>
-     <include file="$(find moveo6_moveit_config)/launch/ros_controllers.launch">
-  
-    </include>
-    
+    <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
+      <param name="use_gui" value="false"/>
+      <rosparam param="source_list">[move_group/fake_controller_joint_states]</rosparam>
+    </node>
 </launch>
